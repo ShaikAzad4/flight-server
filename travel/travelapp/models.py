@@ -13,6 +13,7 @@ class Flight(models.Model):
     no_of_non_business_class_seets = models.PositiveIntegerField()
     features = models.TextField()
     kilometers = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return f"{self.name} starts from {self.start_from} to {self.reaches_to}"

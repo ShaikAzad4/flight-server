@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'q*7sycmn(z(=26%b(xjlc67vo**sd!g8(o8pvzaf)42wvdnuj('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "98.81.54.139",
@@ -158,3 +158,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://98.81.54.139",
     "http://localhost:5173"
 ]
+
