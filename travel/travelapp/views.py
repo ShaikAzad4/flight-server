@@ -96,3 +96,9 @@ class UserBookingsView(APIView):
         bookings = Booking.objects.select_related('user','flight','business_seat').filter(user_id=user_id)
         serializer = BookingSerializer(bookings, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
+from django.http import HttpResponse
+
+def health(request):
+    return HttpResponse("OK")

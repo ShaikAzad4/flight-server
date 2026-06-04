@@ -11,6 +11,7 @@ urlpatterns = [
     path('register/',views.RegisterView.as_view(), name='register'),
     path('bookings/',views.BookingView.as_view(), name='booking'),
     path('user/<int:user_id>/bookings/', views.UserBookingsView.as_view(), name='user_bookings'),
+    path("health/", views.health),
 ]
 
 if settings.DEBUG:
