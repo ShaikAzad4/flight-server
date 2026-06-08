@@ -16,7 +16,7 @@ from rest_framework.throttling import ScopedRateThrottle
 from travelapp.rate_limiter import rate_limit
 
 class RegisterView(APIView):
-    throttle_classes = [AnonRateThrottle]  # 10 requests/minute per IP
+    # throttle_classes = [AnonRateThrottle]  # 10 requests/minute per IP
     
     def post(self, request):
         print("Request has hit to this!")
@@ -29,7 +29,7 @@ class RegisterView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class LoginView(APIView):
-    throttle_classes = [AnonRateThrottle]  # 10 requests/minute per IP
+    # throttle_classes = [AnonRateThrottle]  # 10 requests/minute per IP
     
     def post(self, request):
         username = request.data.get('username')
@@ -62,7 +62,7 @@ class BookingView(APIView):
     permission_classes = [IsAuthenticated]
     # throttle_classes = [ScopedRateThrottle]
     # throttle_scope = 'booking'
-    @rate_limit(max_requests=5, time_window=60)
+    # @rate_limit(max_requests=5, time_window=60)
     def post(self, request):
         seatId = request.data.get('seatId')
         print("We entered the booking view",seatId)
