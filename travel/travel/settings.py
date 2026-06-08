@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://flight-server-0tf6.onrender.com'
+    'flight-server-0tf6.onrender.com'
 ]
 
 
